@@ -57,17 +57,17 @@ Following are the list of interview questions on HTML5, CSS3, JS, ES6, ReactJS, 
 <details>
     <summary>2. In a promise chain of 5 promises, what if promise 4 fails will next promise be executed ?</summary>
     <p>No, it does not execute next</p>
-</details
+</details>
 
 <details>
     <summary>3. Write a polyfill for Promise</summary>
     <p>Implement using setTimeout</p>
-</details
+</details>
 
 <details>
     <summary>4. What is the difference between Promise.race() and Promise.all()?</summary>
     <p>This returns a promise as soon as any one of the Promise is resolved where as in Promise.all(), it waits until all the promises are resolved.</p>
-</details
+</details>
 
 <details>
     <summary>5. What is wrong in below code?</summary>
