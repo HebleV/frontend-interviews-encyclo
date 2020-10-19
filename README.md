@@ -47,6 +47,18 @@ Following are the list of interview questions on HTML5, CSS3, JS, ES6, ReactJS, 
     <p>Its the initial size or the width of the flex item</p>
 </details>
 
+<details>
+    <summary>7. What is rem and em value in CSS ?</summary>
+    <p>rem(Root em) - Relative to font-size of the root element
+em - Relative to the font-size of the element (2em means 2 times the size of the current font)
+</p>
+</details>
+
+<details>
+    <summary>8. What is box model ?</summary>
+    <p><a href='https://www.w3schools.com/css/css_boxmodel.asp'>More Details</a></p>
+</details>
+
 ## JS & ES6
 
 <details>
@@ -142,6 +154,21 @@ But if it is let or const then it will be ReferenceError.
     <p><b>Answer:</b> If you know how many arguments you would be passing then use call and if you are not sure how many arguments you would be passing or if the arguments are already an array or an object then use apply.
 </details>
 
+<details>
+    <summary>14. What is 5 > 4 > 3 ? </summary>
+    <p><b>Answer:</b>False coz JS coerces 5>4 first which is true (1) then true(1) > 3 = false;</p>
+</details>
+
+<details>
+    <summary>15. What is 3 + true ?</summary>
+    <p><b>Answer:</b>4 coz JS coerces true to 1 and 3 + false would be 3.</p>
+</details>
+
+<details>
+    <summary>16. Different ways to create object in javascript ?</summary>
+    <p>Updating...</p>
+</details>
+
 
 ## ReactJS
 
@@ -180,6 +207,26 @@ But if it is let or const then it will be ReferenceError.
     <summary>6. What are the new features added in React 16.7 ?</summary>
     <p>React Hooks, React.memo, React.lazy, React.suspense, Context, error boundary, and React.Fragment.
     </p>
+</details>
+
+<details>
+    <summary>7. What is useCallback</summary>
+    <p>If there is a function(lambda function) which is re-rendered everytime then we can use useCallback to prevent it. <a href='https://www.youtube.com/watch?v=-Ls48dd-vJE'>More</a></p>
+</details>
+
+<details>
+    <summary>8. What is virtual DOM?</summary>
+    <p>Updating...</p>
+</details>
+
+<details>
+    <summary>9. What is shadow DOM?</summary>
+    <p>Shadow DOM API helps in encapsulation of certain hidden elements from the actual DOM nodes/elements so that the hidden code doesn’t clash with actual DOM code. Shadow DOM api provides a way to attach a separate hidden DOM to an element (Shadow Host) of the actual DOM.  Example: HTML <video> tag
+To attach a shadow dom, we use attachShadow method.
+Example: let shadow = element.attachShadow({ mode: ‘open’});
+In this element is the shadow host and shadow is the shadow root.
+    <a href='https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM'>More Details</a>
+</p>
 </details>
 
 ## Redux
