@@ -169,6 +169,35 @@ But if it is let or const then it will be ReferenceError.
     <p>Updating...</p>
 </details>
 
+<details>
+    <summary>17. Find the longest subarray having sum equal to s ?</summary>
+    <p><b>Answer:</b><a href='https://codepen.io/HebleV/pen/QWybGaV?editors=1012'>Solution</a></p>
+</details>
+
+<details>
+    <summary>18. Merge the keys and values to form an object?</summary>
+    <p><b>Answer:</b><a href='https://codepen.io/HebleV/pen/zYrGoYb?editors=1112'>Solution</a></p>
+</details>
+
+<details>
+    <summary>15. What is 3 + true ?</summary>
+    <p><b>Answer:</b>4 coz JS coerces true to 1 and 3 + false would be 3.</p>
+</details>
+
+<details>
+    <summary>16. What is functional chaining ?</summary>
+    <p><b>Answer:</b>Updating...</p>
+</details>
+
+<details>
+    <summary>17. How do you create inheritance in JS ?</summary>
+    <p><b>Answer:</b>Updating...</p>
+</details>
+
+<details>
+    <summary>18. What is the purpose of deep cloning ?</summary>
+    <p><b>Answer:</b>To create a deep copy or new object independent from old one. One way is first json.stringify the object or array and json parse it. Another way is, It is created using lodash. Object.assign creates a shallow copy means the new object will still have same old references - <a href="https://flaviocopes.com/how-to-clone-javascript-object/#:~:text=Deep%20copy%20vs%20Shallow%20copy,-A%20shallow%20copy&text=If%20an%20object%20references%20other,independent%20from%20the%20old%20one">More info</a></p>
+</details>
 
 ## ReactJS
 
@@ -229,11 +258,89 @@ In this element is the shadow host and shadow is the shadow root.
 </p>
 </details>
 
+<details>
+    <summary>10. How can you improve performance of React app ?</summary>
+    <p>Updating...</p>
+</details>
+
+<details>
+    <summary>11. What is getDerivedStateFromError() in ErrorBoundary component ?</summary>
+    <p>It is used to render a fallback UI after an error is thrown.</p>
+</details>
+
+<details>
+    <summary>12. What is componentDidCatch() in ErrorBoundary component ?</summary>
+    <p>It is used to log error information.</p>
+</details>
+
+<details>
+    <summary>13. What is React Context ?</summary>
+    <p> It provides a way to pass data through the component tree without having to pass props down manually at every level. For ex: we have a parent component with some data. And it has child and grand child components. In the current scenario if we want to pass data then we will have to pass data to child then grandchild. Even though child doesn’t need data but still we are passing data. So using context we can now directly pass data from parent to grand child.
+It uses React.Provider which provides data and React.Consumer which accesses/consumes data.
+</p>
+</details>
+
+<details>
+    <summary>14.How can we access DOM in React ? Can we access ?</summary>
+    <p>Using Refs which are created by React.creatRef(). These Refs are created and attached to React elements via the ref attribute.</p>
+</details>
+
+<details>
+    <summary>15. What is one way and two way bindings ?</summary>
+    <p>one way data binding -> model is the single source of truth . whatever happens on UI triggers a message to model to update a part of data. So data flows in single direction and which becomes easy to understand.
+two way data binding -> any change in UI field updates the model and any change in model updates the UI field.
+</p>
+</details>
+
+<details>
+    <summary>16. How do you render React on server side ?</summary>
+    <p>Updating...</p>
+</details>
+
+<details>
+    <summary>17. What is getDerviedStateFromProps in React lifecycle ?</summary>
+    <p>This is the place where the state object is set based on initial props.
+This method can be invoked in both mounting and updating phases.
+</p>
+</details>
+
+<details>
+    <summary>18. What is reconciliation in React ?</summary>
+    <p>The process of finding the minimum number of changes that must be made in order to make virtual DOM and actual DOM tree identical. So keys play an important role in reconciliation. <a href='https://www.youtube.com/watch?v=b8IcYOV5_Rc'>More info</a></p>
+</details>
+
+<details>
+    <summary>19. Is setState an asynchronous or synchronous ?</summary>
+    <p>Asynchronous - Because it makes a call to callback function <a href='https://medium.com/@wereHamster/beware-react-setstate-is-asynchronous-ce87ef1a9cf3'>More info</a></p>
+</details>
+
+<details>
+    <summary>20. What happens if we declare setState inside render () ?</summary>
+    <p>It will be an infinite loop</p>
+</details>
+
 ## Redux
 
 <details>
     <summary>1. Explain the flow of Redux</summary>
     <p>We write an action which is dispatched when an event is triggered. This inturn calls the respective reducer which doesn't directly update the state but rather makes a copy and returns a new state and thus updating the store. This will rerender the component.<br/>
 <b>Note:</b> Usually setState is not used or required when using redux. Based on the requirements it can be used. But mostly initial states and default props should be used. As local states are difficult to maintain
+</p>
+</details>
+
+<details>
+    <summary>2. Does reducer update data?</summary>
+    <p>Yes it does but it doesn’t directly update state object but rather return a new updated object</p>
+</details>
+
+<details>
+    <summary>3. How will you update/render a table list of data using react and redux ?</summary>
+    <p>write one more component only for table body which will render table body given a table data. It will loop through data and render those lists.</p>
+</details>
+
+<details>
+    <summary>4. How do you update data in react-redux app ?</summary>
+    <p>Based on requirement we dispatch appropriate actions which can fetch api data and call to another action with type and payload or directly we dispatch action with type and data which has been sent to reducer.
+Note: Usually setState is not used or required when using redux. Based on the requirements it can be used. But mostly initial states and default props should be used. As local states are difficult to maintain
 </p>
 </details>
