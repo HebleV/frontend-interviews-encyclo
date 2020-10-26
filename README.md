@@ -199,6 +199,57 @@ But if it is let or const then it will be ReferenceError.
     <p><b>Answer:</b>To create a deep copy or new object independent from old one. One way is first json.stringify the object or array and json parse it. Another way is, It is created using lodash. Object.assign creates a shallow copy means the new object will still have same old references - <a href="https://flaviocopes.com/how-to-clone-javascript-object/#:~:text=Deep%20copy%20vs%20Shallow%20copy,-A%20shallow%20copy&text=If%20an%20object%20references%20other,independent%20from%20the%20old%20one">More info</a></p>
 </details>
 
+<details>
+    <summary>19. What are static methods ?</summary>
+    <p><b>Answer:</b>Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances. Usually, static methods are used to implement functions that belong to the class, but not to any particular object of it.</p>
+</details>
+
+<details>
+    <summary>20. What is a singleton ?</summary>
+    <p><b>Answer:</b>It is an object which can be instantiated only once. So even if you repeatedly call its constructor same instance is returned</p> <a href='https://www.dofactory.com/javascript/singleton-design-pattern'>More info</a>
+</details>
+
+<details>
+    <summary>21. What is the difference between map, filter, and reduce ?</summary>
+    <p><b>Answer:</b>Updating...</p>
+</details>
+
+<details>
+    <summary>22. What sort method will you use for building web app ?</summary>
+    <p><b>Answer:</b>Updating...</p>
+</details>
+
+<details>
+    <summary>23. How will you make sure your app is not crashed if there are no values or null in nested json objects ?</summary>
+    <p><b>Answer:</b>We can make use of new JS feature of optional chaining operator `?.`</p><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining'README.md>More info</a>
+</details>
+
+<details>
+    <summary>24. How will you find the type of an element or object ?</summary>
+    <p><b>Answer:</b>Using typeof</p>
+</details>
+
+<details>
+    <summary>25. What is {} + [] = ?</summary>
+    <p><b>Answer:</b>0 because of the type of conversion which is empty object and empty array.</p>
+</details>
+
+<details>
+    <summary>26. What are the type of object and array ?</summary>
+    <p><b>Answer:</b>typeof object = object; <br/>
+		   typeof array = object;</p>
+</details>
+
+<details>
+    <summary>27. What is the difference between slice and splice ?</summary>
+    <p><b>Answer:</b>Slice doesn’t change existing array but splice does.</p>
+</details>
+
+<details>
+    <summary>28. What are higher order functions or components ?</summary>
+    <p><b>Answer:</b>The functions that can take other functions as inputs or provide functions as its output. Ex : map, filter, reduce </p>
+</details>
+
 ## ReactJS
 
 <details>
@@ -317,6 +368,33 @@ This method can be invoked in both mounting and updating phases.
 <details>
     <summary>20. What happens if we declare setState inside render () ?</summary>
     <p>It will be an infinite loop</p>
+</details>
+
+<details>
+    <summary>21. What is the difference between componentWillReceiveProps and componentDidUpdate?</summary>
+    <p>componentWillReceiveProps gets called before the rendering begins. It compares incoming props to current props and decide what to render.</p><br/>
+    <p>componentDidUpdate gets called after any rendered HTML has finished loading. It receives 2 arguments prevProps & prevState.</p>
+</details>
+
+<details>
+    <summary>22. How will you declare setTimeout in React component ?</summary>
+    <p>It can be declared in useEffect and then return the clearTimeout() to unmount the component.</p>
+</details>
+
+<details>
+    <summary>23. What is the purpose of super in constructor ?</summary>
+    <p>To bind this to parent class component</p>
+</details>
+
+<details>
+    <summary>24. What is the advantage of using arrow functions in React components ?</summary>
+    <p>It will bind this to surrounding code context or to function so this will avoid bugs.</p>
+</details>
+
+<details>
+    <summary>25. What is code splitting ?</summary>
+    <p>It is splitting your code in such a way that, only that part of code is loaded required for the current screen. You can achieve this using dynamic imports (webpack) and lazy loading react components. ( Webpack will asynchronously load the components or spits out different files for different components. ) For 3rd party libraries or vendor files, it will load for first time and cached for ever in browser, so that it doesn’t load again when user visits for second time.</p>
+    <a href='https://www.youtube.com/watch?v=bb6RCrDaxhw'>More info</a>
 </details>
 
 ## Redux
