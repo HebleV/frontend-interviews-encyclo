@@ -59,6 +59,13 @@ em - Relative to the font-size of the element (2em means 2 times the size of the
     <p><a href='https://www.w3schools.com/css/css_boxmodel.asp'>More Details</a></p>
 </details>
 
+<details>
+    <summary>9. What is :is() and :where() in CSS ?</summary>
+    <p>is() pseudoclass is to reduce the repetition in selectors lists.
+:where() pseudoclass is to keep the specificity of selector low
+<a href='https://webplatform.news/issues/2020-06-04'>More Details</a></p>
+</details>
+
 ## JS & ES6
 
 <details>
@@ -250,6 +257,60 @@ But if it is let or const then it will be ReferenceError.
     <p><b>Answer:</b>The functions that can take other functions as inputs or provide functions as its output. Ex : map, filter, reduce </p>
 </details>
 
+<details>
+    <summary>29. What are the differences between local, session storages and cookies ?</summary>
+    <p><b>Answer:</b>            		 local 		      session              cookies
+	Capacity     		 10 mb                  5mb	          4kb
+		Expiry	        		 Never                  on tab close         manually set
+		Storage location	browser	     browser                browser n server
+
+	          Methods
+		localStorage
+          localStorage.setItem(‘name’, john);
+          localStorage.getItem(‘name’);
+          localStorage.removeItem(‘name’);
+         Similar methods for session storage.
+
+	Cookies
+         Document.cookie = ‘name=john; expires =’ + new Date(9999, 0 ,1).toUTCString();
+</p>
+</details>
+
+<details>
+    <summary>30. What is the output ?</summary>
+    <p><b>Question:</b>a();
+b();
+c();
+function a() {
+   console.log(1)
+}
+ 
+var b = function() {
+   console.log(2);
+}
+ 
+var c = () => {
+   console.log(3);
+}
+</p>
+<p>Answer: 1<br>
+                Error : b is not a function<br>
+
+            Note: It will not even go to c() call coz of error at b(); but c() will also throw same error.</p>
+</details>
+
+<details>
+    <summary>31. Write a program for function sum(1)(2)(3) which gives output as 6 ?</summary>
+    <p><b>Answer:</b>let sum = function(a) {
+		                return function(b) {
+			                return function(c) {
+                                    return a + b + c;
+                                   }
+                             }
+                    }
+</p>
+</details>
+
 ## ReactJS
 
 <details>
@@ -395,6 +456,41 @@ This method can be invoked in both mounting and updating phases.
     <summary>25. What is code splitting ?</summary>
     <p>It is splitting your code in such a way that, only that part of code is loaded required for the current screen. You can achieve this using dynamic imports (webpack) and lazy loading react components. ( Webpack will asynchronously load the components or spits out different files for different components. ) For 3rd party libraries or vendor files, it will load for first time and cached for ever in browser, so that it doesn’t load again when user visits for second time.</p>
     <a href='https://www.youtube.com/watch?v=bb6RCrDaxhw'>More info</a>
+</details>
+
+<details>
+    <summary>26. How do you measure performance of React components or application ?</summary>
+    <p>1.Use React profiler to see what components are taking lot of time to load<br>
+	  2. Use perf library.<br>
+  3. Use useMemo/React.Memo hooks to cache a component
+</p>
+</details>
+
+<details>
+    <summary>27. What is memoization ?</summary>
+    <p>Memoization is the idea of caching a value so that you don’t have to compute every single time. </p>
+</details>
+
+<details>
+    <summary>28. What does useMemo/React.Memo do ?</summary>
+    <p>If you are sure that a function always returns the same computed value for a given input then there is no need to recompute or recalculate the value every single time. The value can be cached. This is done using useMemo or React.Memo.</p>
+</details>
+
+<details>
+    <summary>29. What are the disadvantages of using useMemo ?</summary>
+    <p>One has to use useMemo judiciously and efficiently because if you use useMemo for functions which are not required to be memoized then it uses a lot of memory overhead and causes performance issues again.</p>
+</details>
+
+<details>
+    <summary>30. What is useRef ?</summary>
+    <p>It is like useState but it doesn’t render every time there is an update. It holds the data or persists data/update between different renders without re-rendering the component.</p>
+</details>
+
+<details>
+    <summary>31. Write a 2 line code to increment count by 5 using useState ?</summary>
+    <p>const [count, setCount] = useState(0);
+              setCount(count + 5);
+</p>
 </details>
 
 ## Redux
