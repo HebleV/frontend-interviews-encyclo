@@ -66,6 +66,11 @@ em - Relative to the font-size of the element (2em means 2 times the size of the
 <a href='https://webplatform.news/issues/2020-06-04'>More Details</a></p>
 </details>
 
+<details>
+    <summary>10. How do you achieve grid and flex layout using plain CSS ?</summary>
+    <p>Updating...</a></p>
+</details>
+
 ## JS & ES6
 
 <details>
@@ -311,6 +316,78 @@ var c = () => {
 </p>
 </details>
 
+<details>
+    <summary>32. What are generators and how will you know if it is an iterator ?</summary>
+    <p><b>Answer:</b>You can know if it is an iterator if function is preceded by * symbol.</p>
+</details>
+
+<details>
+    <summary>33. What are the differences between arrow function and normal function ?</summary>
+    <p><a href="https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/">More info</a></p>
+</details>
+
+<details>
+    <summary>34. How do you achieve inheritance ?</summary>
+    <p><b>Answer:</b>Updating...</p>
+</details>
+
+<details>
+    <summary>35. What is function currying ?</summary>
+    <p><a href="https://www.youtube.com/watch?v=vQcCNpuaJO8&ab_channel=AkshaySaini">More info</a></p>
+</details>
+
+<details>
+    <summary>36. What are map and weakmap ?</summary>
+    <p>Map doesn’t allow to garbage collect the object reference and WeakMap does allow. 
+Map accepts objects, strings, num etc but WeakMap accepts only objects as keys.
+Map has size property but WeakMap does not have.
+</p>
+</details>
+
+<details>
+    <summary>37. What is “2” + “2” - “2” ?</summary>
+    <p><b>Answer:</b>20 - Because + will concatenate which will give 22 and - will type coerce and convert it into numbers. So 22 - 2 = 20</p>
+</details>
+
+<details>
+    <summary>38. What is typeof null ?</summary>
+    <p><b>Answer:</b>Object</p>
+</details>
+
+<details>
+    <summary>39. What is the output 
+console.log(a,b)
+{
+let a = 10;
+var b = 20
+console.log(a,b)
+}
+console.log(a,b)
+</summary>
+    <p><b>Answer:</b>Reference Error : a is not defined.</p>
+</details>
+
+<details>
+    <summary>40. What is the value of following ?</summary>
+    <p><b>Answer:</b> 0 === false; // false <br>
+              0 == false // true
+</p>
+</details>
+
+<details>
+    <summary>41. What are generators ?</summary>
+    <p><b>Answer:</b>Generators are basically the functions which returns the generator object which holds the entire generator iterable that can be iterated using the next() method. 
+I has yield key word which is like return keyword. 
+next() method will return an object with “done” flag and “value” key. 
+</p>
+</details>
+
+<details>
+    <summary>42. Why does const allow change in values when assigned to an object ?</summary>
+    <p>Because it refers to a memory address not the actual object itself.
+</p>
+</details>
+
 ## ReactJS
 
 <details>
@@ -491,6 +568,21 @@ This method can be invoked in both mounting and updating phases.
     <p>const [count, setCount] = useState(0);
               setCount(count + 5);
 </p>
+</details>
+
+<details>
+    <summary>32. What are the advantages of using functional components over class components in React ?</summary>
+    <p>
+    <ul>
+    <li>You don't have to manually bind "this" like in class component</li>
+    <li>Simple and easy to test</li>
+    </ul>
+    </p>
+</details>
+
+<details>
+    <summary>33. How can you compare previous state and previous props in react hooks ?</summary>
+    <p>By writing a custom hook using the useRef <a href="https://blog.logrocket.com/how-to-get-previous-props-state-with-react-hooks/">More info</a></p>
 </details>
 
 ## Redux
