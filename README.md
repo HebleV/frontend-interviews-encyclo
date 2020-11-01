@@ -388,6 +388,99 @@ next() method will return an object with “done” flag and “value” key.
 </p>
 </details>
 
+<details>
+    <summary>43. What are primitive data types and reference data types ?</summary>
+    <p>Primitive : Number, Boolean, String, Undefined, Null
+Reference : Functions, Array and objects (though typeof of all are object only)
+For primitive, Can assign a value directly.
+For reference, you cannot coz you assign to an address in a memory not actual value.<a href='https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0#:~:text=Assigning%20by%20Reference,var%20reference%20%3D%20%5B1%5D%3B'>More info</a></p>
+</details>
+
+<details>
+    <summary>44. What is the difference between object.preventExtensions, seal and freeze methods ?</summary>
+    <p>These deals with adding, deleting, and modification of properties.
+preventExtensions => Doesn’t allow addition of new properties.
+Seal => Doesn’t allow addition of new properties and deletion of existing   properties.
+Freeze => Doesn’t allow addition, deletion and modification of object properties.</p>
+</details>
+
+<details>
+    <summary>45. What is the output for below destructuring assignment ?</summary>
+    <p>1-  const foo = ['one', 'two', 'three']; 
+   const [red, yellow, green] = foo; 
+   console.log(red); // "one" 
+   console.log(yellow); // "two" 
+   console.log(green); // "three"
+    </p>
+    <p>2- When deconstructing an object, if a property is not accessed in itself, it will continue to look up along the prototype chain.
+    let obj = {self: '123'}; 
+    obj.__proto__.prot = '456';
+    const {self, prot} = obj; 
+    // self "123"
+    // prot "456"（Access to the prototype chain）
+    </p>
+    <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment'>More info</a>
+</details>
+
+<details>
+    <summary>46. Convert the nested array into single dimension array ?</summary>
+    <p>Input : let arr = [1,[2,3,[4,5,[6,7]]]];
+       Output: arr=[1,2,3,4,5,6,7]
+    </p>
+</details>
+
+<details>
+    <summary>47. What are rest and spread operators ?</summary>
+    <p>Updating...</p>
+</details>
+
+<details>
+    <summary>48. Reverse a string and print it</summary>
+    <p><a href='https://github.com/HebleV/100-days-of-code/blob/master/Wesbos_JS_tuts/reverse.js'>Check here</a></p>
+</details>
+
+<details>
+    <summary>49. How does generators work in backend or make it iterable ?</summary>
+    <p>Updating...</p>
+</details>
+
+<details>
+    <summary>50. What is the difference between null and undefined ?</summary>
+    <a href='https://codeburst.io/javascript-whats-the-difference-between-null-undefined-37793b5bfce6'>Read here</a>
+</details>
+
+<details>
+    <summary>51. How to ensure that only one of the object properties is not writable or readable ?</summary>
+    <p>This is achieved using Object.defineProperty.
+	Let name = {
+		firstname: “john”
+		}
+        Object.defineProperty(name, ‘lastName’,{
+		value : “doe”,
+		writable:false
+} )
+Now you can update firstname but not lastname.
+</p>
+</details>
+
+<details>
+    <summary>52. What would be the output in below code ?</summary>
+    <a href='https://wesbos.com/for-of-es6'>Read here</a>
+</details>
+
+<details>
+    <summary>53. What is the output ?</summary>
+    <p>Let x = function(){
+	return
+	{
+	 message:’hi’
+	}
+}
+x();
+</p>
+<p>Answer: x is undefined coz in a function after return statement there must be braces rather than on next line else JS will insert a comma and return.</p>
+</details>
+
 ## ReactJS
 
 <details>
@@ -584,6 +677,29 @@ This method can be invoked in both mounting and updating phases.
     <summary>33. How can you compare previous state and previous props in react hooks ?</summary>
     <p>By writing a custom hook using the useRef <a href="https://blog.logrocket.com/how-to-get-previous-props-state-with-react-hooks/">More info</a></p>
 </details>
+
+<details>
+    <summary>34. How do you manage state now in React using hooks ?</summary>
+    <p>It is like useState but it doesn’t render every time there is an update. It holds the data or persists data/update between different renders without re-rendering the component.</p>
+</details>
+
+<details>
+    <summary>35. What are performance metrics that you will check for a web app ?</summary>
+    <p>
+        <ul>
+            <li>Loading Time</li>
+            <li>Network Requests</li>
+            <li>Caching</li>
+            <li>Code Splitting</li>
+        </ul>
+    </p>
+</details>
+
+<details>
+    <summary>36. How can you ensure a component or a thing is not re-rendered in class and functional component ?</summary>
+    <p>Updating...</p>
+</details>
+
 
 ## Redux
 
