@@ -481,6 +481,11 @@ x();
 <p>Answer: x is undefined coz in a function after return statement there must be braces rather than on next line else JS will insert a comma and return.</p>
 </details>
 
+<details>
+    <summary>54. What is the value of console.log(Math.max()) ?</summary>
+    <p>-infinity coz that is the lowest number in maths when no input is given.</p>
+</details>
+
 ## ReactJS
 
 <details>
@@ -700,6 +705,19 @@ This method can be invoked in both mounting and updating phases.
     <p>Updating...</p>
 </details>
 
+<details>
+    <summary>37. What is a lambda function in React ?</summary>
+    <p>Everytime the component is rendered, the function is recreated.</p>
+</details>
+
+<details>
+    <summary>38. What is useRef ?</summary>
+    <ul>
+        <li>Stores a previous value</li>
+        <li>Helps in persisting the state between different renders without actually re-rendering the component. In contrast useState re-renders everytime.</li>
+    </ul>
+</details>
+
 
 ## Redux
 
@@ -725,4 +743,90 @@ This method can be invoked in both mounting and updating phases.
     <p>Based on requirement we dispatch appropriate actions which can fetch api data and call to another action with type and payload or directly we dispatch action with type and data which has been sent to reducer.
 Note: Usually setState is not used or required when using redux. Based on the requirements it can be used. But mostly initial states and default props should be used. As local states are difficult to maintain
 </p>
+</details>
+
+
+## PWA
+
+<details>
+    <summary>1. What is a service worker ?</summary>
+    <ul>
+        <li> Runs in the background of users browser.</li>
+        <li>Acts like a proxy server between app, browser and network.</li>
+        <li>Allows apps to continue working offline in case of loss of internet</li>
+        <li>Efficient caching of assets and make them available when user device is offline</li>
+        <li>They run on a *separate thread *from the main JavaScript code of our page, and don't have any access to the DOM structure. This introduces a different approach from traditional web programming — the API is non-blocking, and can send and receive communication between different contexts. You are able to give a Service Worker something to work on, and receive the result whenever it is ready using a Promise-based approach.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>2. What is manifest.json in PWA ?</summary>
+    <p>It is a json file containing info about app like title, logi link, splash screen, background n theme color etc. It makes the website installable.</p>
+</details>
+
+<details>
+    <summary>3. How do you make a website installable ?</summary>
+    <ul>
+        <li>A web manifest with all fields</li>
+        <li>Website is served from a secure https connection</li>
+        <li>An icon to represent the app on device</li>
+        <li>Service worker registered to make work offline</li>
+    </ul>
+</details>
+
+<details>
+    <summary>4. How do you store data offline in PWA ?</summary>
+    <ul>
+        <li>Using cacheAPI which is part of service workers</li> 
+        <li>Use indexedDB with a promise wrapper</li>
+    </ul>
+</details>
+
+<details>
+    <summary>5. Explain the service worker lifecycle ?</summary>
+    <ul>
+        <li>The install event is the first event a service worker gets, and it only happens once.</li>
+        <li>A promise passed to installEvent.waitUntil() signals the duration and success or failure of your install.</li>
+        <li>A service worker won't receive events like fetch and push until it successfully finishes installing and becomes "active".</li>
+        <li>By default, a page's fetches won't go through a service worker unless the page request itself went through a service worker. So you'll need to refresh the page to see the effects of the service worker.</li>
+        <li>clients.claim() can override this default, and take control of non-controlled pages.</li>
+        <li>Install => Wait => active => Receive fetch and push events</li>
+    </ul>
+</details>
+
+<details>
+    <summary>6. What will the service worker script file have ?</summary>
+        <ul>
+            <li>It will have a cache-name i.e. app name</li>
+            <li>URLs to cache</li>
+            <li>Then add 3 event listeners to install ,fetch and activate.</li>
+        </ul>
+</details>
+
+<details>
+    <summary>7. How can you convert a create-react-app into a PWA ?</summary>
+    <ul>
+        <li>Include the above step 6q</li>
+        <li>Update index.html to check if client browser supports service workers by adding another event</li> 
+        <li>listener “load” the service worker</li>
+        <li>Change serviceworker.unregister to serviceworker.register()</li>
+        <li>Add progressive enhancement principle i.e. add some html content to display default html ...loading</li>
+        <li>Add splash icon and update manifest.json</li>
+        <a href='https://medium.com/@toricpope/transform-a-react-app-into-a-progressive-web-app-pwa-dea336bd96e6'>More info</a>
+    </ul>
+</details>
+
+<details>
+    <summary>8. How will you implement Server Side Rendering or SSR?</summary>
+    <p>The reactjs provides the server-side rendering using 'react-dom/server' module.This module have renderToString() method to replace HTML string into the body as a response.</p>
+        <ul>
+            <li>Create a server file where you import express and provide port number</li>
+            <li>Read the index.html from /build folder using fs.readfile (nodejs)</li>
+            <li>On success, replace the HTML string i.e. <div id=’root’></div>imported app component with <div id=’root’>${ReactDOMServer.renderToString(<App/>)}</div></li>
+            <li>In the react index.html file, replace React.render with React.hydrate</li>
+            <li>Serve the static files from build folder</li>
+            <li>Then add changes in server folder to ignore node modules and  add babel preset to compile</li>
+            <li>Add ssr command in package.json in react app to run</li>
+            <a href='https://www.youtube.com/watch?v=NwyQONeqRXA'>More info</a>
+        </ul>
 </details>
