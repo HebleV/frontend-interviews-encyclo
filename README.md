@@ -71,6 +71,11 @@ em - Relative to the font-size of the element (2em means 2 times the size of the
     <p>Updating...</a></p>
 </details>
 
+<details>
+    <summary>11. How do you remove the default gap between images that is formed when more than one images are displayed adjacent to each other ?</summary>
+    <p>give the container of the img tags font-size:0px;</p> <a href='https://jsfiddle.net/LyFAb/'>Check here</a>
+</details>
+
 ## JS & ES6
 
 <details>
@@ -499,11 +504,35 @@ console.log("b")
 Because forEach is synchronous even though it takes a callback function.</p>
 </details>
 
-
 <details>
     <summary>56.What is the output [...[...'...']].length ?</summary>
     <p>Answer: 3</p>
 </details>
+
+<details>
+    <summary>57. What is the output?</summary>
+    <p>let i;
+  for (i = 0; i < 3; i++) {
+    const log = () => {
+      console.log(i);
+    }
+    setTimeout(log, 100);
+  }
+</p>
+<p>Answer: 3 3 3</p>
+</details>
+
+<details>
+    <summary>58.Write a polyfill for map function ?</summary>
+    <p>Updating...</p>
+</details>
+
+<details>
+    <summary>59.What is the output ?</summary>
+    <p>console.log(typeof typeof number);</p>
+    <p>typeof number => string</p>
+</details>
+
 
 ## ReactJS
 
@@ -737,6 +766,29 @@ This method can be invoked in both mounting and updating phases.
     </ul>
 </details>
 
+<details>
+    <summary>39. Why don’t we make API calls in constructor or componentWillMount ?</summary>
+    <p>Since, JS being asynchronous, api calls will have to go through event loop then render the component and rerender it. This will increase complexity </p>
+    <a href='https://medium.com/devinder/why-api-call-is-recommended-in-componentdidmount-38c8c3c57834'>More info</a>
+</details>
+
+<details>
+    <summary>40. How to make sure that useEffect is not called again n again ?</summary>
+    <p>Pass an empty array as a second argument</p>
+</details>
+
+<details>
+    <summary>41. How to display value in an uncontrolled component ?</summary>
+    <p>controlled means an input value must have to be stored in a state in order to access it. Any change in UI should update state. (Check in state values in react components to understand diff). React prefers to have controlled components than uncontrolled and it is also the standard. Uncontrolled must be avoided as much as possible. <a href='https://codesandbox.io/s/keen-grothendieck-q1y4x?file=/src/App.js'>Here is the example</a> </p>
+    <p>If it is for uncontrolled then use refs instead of e.target.value</p>
+    <a href='https://codesandbox.io/s/dreamy-chatelet-y5hje?file=/src/App.js'>Example</a>
+</details>
+
+<details>
+    <summary>42. How do you pass props from parent to child using hooks ?</summary>
+    <a href='https://codesandbox.io/s/dark-smoke-cwgje?file=/src/App.js'>Example 1</a>
+    <a href='https://codesandbox.io/s/suspicious-noether-xxt58?file=/src/Child.js'>Example 1</a>
+</details>
 
 ## Redux
 
