@@ -483,7 +483,26 @@ x();
 
 <details>
     <summary>54. What is the value of console.log(Math.max()) ?</summary>
-    <p>-infinity coz that is the lowest number in maths when no input is given.</p>
+    <p>infinity coz that is the lowest number in maths when no input is given.</p>
+</details>
+
+<details>
+    <summary>55.What is the output ?</summary>
+    <p>const array = [1, 2, 3, 4, 5];
+console.log("a")
+array.forEach((el, i) => {
+    console.log(el);
+});</p>
+<p>Answer: 
+console.log("b")
+// a 1 2 3 4 5 b
+Because forEach is synchronous even though it takes a callback function.</p>
+</details>
+
+
+<details>
+    <summary>56.What is the output [...[...'...']].length ?</summary>
+    <p>Answer: 3</p>
 </details>
 
 ## ReactJS
