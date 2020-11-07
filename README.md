@@ -76,6 +76,11 @@ em - Relative to the font-size of the element (2em means 2 times the size of the
     <p>give the container of the img tags font-size:0px;</p> <a href='https://jsfiddle.net/LyFAb/'>Check here</a>
 </details>
 
+<details>
+    <summary>12. Implement a toggle button using html,css and JS.</summary>
+    <p>Updating...</p>
+</details>
+
 ## JS & ES6
 
 <details>
@@ -790,6 +795,16 @@ This method can be invoked in both mounting and updating phases.
     <a href='https://codesandbox.io/s/suspicious-noether-xxt58?file=/src/Child.js'>Example 1</a>
 </details>
 
+<details>
+    <summary>43. What is alternate for componentDidUnmount in react hooks ?</summary>
+    <p>You can unmount a component by returning a function which will remove the event or which unmounts the component in useEffect hook.</p>
+</details>
+
+<details>
+    <summary>44. Implement a sticky footer using React JS. After certain height, it should disappear.</summary>
+    <p>Updating...</p>
+</details>
+
 ## Redux
 
 <details>
@@ -814,6 +829,13 @@ This method can be invoked in both mounting and updating phases.
     <p>Based on requirement we dispatch appropriate actions which can fetch api data and call to another action with type and payload or directly we dispatch action with type and data which has been sent to reducer.
 Note: Usually setState is not used or required when using redux. Based on the requirements it can be used. But mostly initial states and default props should be used. As local states are difficult to maintain
 </p>
+</details>
+
+<details>
+    <summary>5. What is a Redux-thunk ?</summary>
+    <p>It acts as a middleware between actions and reducers which help in asynchronous actions. It doesn’t care if action is returning an object but only if it is returning a function. In that case, it just provides dispatch functionality as a parameter to help asynchronous functionality. So in a nutshell, thunk basically provides dispatch functionality to function for giving synchronous actions to reducers.
+    It allows you to return a promise to help in an asynchronous process.
+    </p>
 </details>
 
 
