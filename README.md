@@ -14,6 +14,16 @@ Following are the list of interview questions on HTML5, CSS3, JS, ES6, ReactJS, 
     <p><a href='https://www.w3schools.com/tags/tag_details.asp'>Details Tag</a></p>
 </details>
 
+<details>
+    <summary>3. What is a DOCTYPE in HTML ?</summary>
+    <p>This shows the HTML5 version</p>
+</details>
+
+<details>
+    <summary>4. What are the new tags in html ?</summary>
+    <p>Details tag</p>
+</details>
+
 ## CSS
 
 <details>
@@ -538,6 +548,56 @@ Because forEach is synchronous even though it takes a callback function.</p>
     <p>typeof number => string</p>
 </details>
 
+<details>
+    <summary>60.What are the output ?</summary>
+    <p>console.log('start');
+
+setTimeout(function () {
+  console.log('set timeout');
+}, 0);
+
+Promise.resolve()
+  .then(function () {
+    console.log('promise 1');
+  })
+  .then(function () {
+    console.log('promise 2');
+  });
+
+console.log('end');
+</p>
+<p>Answer: start
+end
+promise 1
+promise 2
+set timeout
+Because, promises are resolved then and there and also, the setTimeout is put into the call stack queue. 
+</p>
+</details>
+
+<details>
+    <summary>61.What will be the output for below code ?</summary>
+    <p>function args(){
+   return arguments;
+}
+</p>
+<p>Answer: [ ] - An empty array or array like object which is the arguments array that is automatically created while creating a function.</p>
+</details>
+
+<details>
+    <summary>62.What is the value for if(0.1+0.2 == 0.3) ?</summary>
+    <p>Updating...</p>
+</details>
+
+<details>
+    <summary>63.Write code which handles all the below case ?</summary>
+    <p>sum(2,3)
+sum(2)(3)
+sum(2)(3)(4)
+</p>
+    <p>Updating...</p>
+</details>
+
 
 ## ReactJS
 
@@ -803,6 +863,27 @@ This method can be invoked in both mounting and updating phases.
 <details>
     <summary>44. Implement a sticky footer using React JS. After certain height, it should disappear.</summary>
     <p>Updating...</p>
+</details>
+
+<details>
+    <summary>45. How many ways to pass data from parent to child component ?</summary>
+    <p>Updating...</p>
+</details>
+
+<details>
+    <summary>46. How do you pass params in url in react ?</summary>
+    <p>Updating...</p>
+</details>
+
+<details>
+    <summary>47. Solve the code</summary>
+    <a href='https://codesandbox.io/s/react-functional-component-2es2k?file=/src/index.js'>Codesandbox</a>
+</details>
+
+<details>
+    <summary>48. How can you improve the performance of infinite scrolling for displaying a large list ?</summary>
+    <p>1. Unmount the old list and load new list<p>
+<p>2. Store in memory</p>
 </details>
 
 ## Redux
